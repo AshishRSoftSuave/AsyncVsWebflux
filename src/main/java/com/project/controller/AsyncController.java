@@ -16,7 +16,7 @@ public class AsyncController {
 	@Async
 	@GetMapping("/async")
 	public CompletableFuture<?> getAsyncResult(HttpServletRequest request) throws InterruptedException{
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		return CompletableFuture.completedFuture("Result is ready !!");
 	}
 }

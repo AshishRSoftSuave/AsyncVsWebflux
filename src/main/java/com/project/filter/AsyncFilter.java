@@ -17,9 +17,7 @@ public class AsyncFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 		try {
-			System.out.println("=========  Wait Initialize  ==========");
-			Thread.sleep(2000);
-			System.out.println("=========  Wait Finished  ==========");
+			Thread.sleep(200);
 		} catch (InterruptedException e) {
 			Thread.currentThread().interrupt();
 			e.printStackTrace();
